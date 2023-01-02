@@ -1,6 +1,9 @@
-﻿﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+﻿﻿<#@ template debug="true" hostspecific="true" language="C#" #>
 <#@ assembly name="System.Core" #>
 <#@ assembly name="System.Data" #>
+<#@ import namespace="System.Linq" #>
+<#@ assembly name="C:\Users\Nigar\Desktop\Ufo\T4\T4TextTemplates\T4\bin\Debug\net7.0\Pluralize.NET.dll" #>
+<#@ assembly name="NetStandard" #>
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
@@ -8,13 +11,14 @@
 <#@ import namespace="System.Data.SqlClient" #>
 <#@ import namespace="System.Reflection"#>
 <#@ import namespace="System.IO" #>
+<#@ import namespace="Pluralize.NET" #>
 <#@ output extension=".cs" #>
 
 <#
 
 string connection = "Server=DESKTOP-KLFF7EB;Database=NORTHWND;Integrated security=sspi;";
-        string folderPath = "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4\\Models\\";
-
+        string folderPath =  "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4TextTemplates\\T4\\Models\\";
+         Pluralizer singlr = new Pluralizer();
         List<Table> tables = GetTables(connection);
         foreach (Table table in tables)
         {
@@ -28,12 +32,12 @@ string connection = "Server=DESKTOP-KLFF7EB;Database=NORTHWND;Integrated securit
 
         foreach (Table table in tables)
         {
-            string filePath = Path.Combine(folderPath, table.Name.Replace(" ", "") + ".cs");
+            string filePath = Path.Combine(folderPath, singlr.Singularize(table.Name.Replace(" ", "")) + ".cs");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 writer.WriteLine("namespace T4.Models");
                 writer.WriteLine("{");
-                writer.WriteLine("    public class " + table.Name.Replace(" ", ""));
+                writer.WriteLine("    public class "+$"{singlr.Singularize(table.Name.Replace(" ", ""))}");
                 writer.WriteLine("    {");
 
                 foreach (Column column in table.Columns)

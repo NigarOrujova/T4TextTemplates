@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class OrderDetails
+    public class OrderDetail
     {
           public int OrderID { get; set; }
           public int ProductID { get; set; }

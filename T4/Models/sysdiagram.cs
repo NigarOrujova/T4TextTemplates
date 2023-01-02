@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class sysdiagrams
+    public class sysdiagram
     {
           public string name { get; set; } = null!;
           public int principal_id { get; set; }

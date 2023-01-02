@@ -1,4 +1,6 @@
-﻿using System.Data.Common;
+﻿using Pluralize.NET;
+using System;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -8,8 +10,9 @@ public class Program
 {
     public static void Main()
     {
+        Pluralizer singlr = new Pluralizer();
         string connection = "Server=DESKTOP-KLFF7EB;Database=NORTHWND;Integrated security=sspi;";
-        string folderPath = "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4\\Models\\";
+        string folderPath = "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4TextTemplates\\T4\\Models\\";
 
         List<Table> tables = GetTables(connection);
         foreach (Table table in tables)
@@ -26,7 +29,7 @@ public class Program
 
         foreach (Table table in tables)
         {
-            string filePath = Path.Combine(folderPath, table.Name.Replace(" ", "") + ".cs");
+            string filePath = Path.Combine(folderPath, singlr.Singularize(table.Name.Replace(" ", "")) + ".cs");
             using (StreamWriter writer = new StreamWriter(filePath))
             {
                 writer.WriteLine("namespace T4.Models");

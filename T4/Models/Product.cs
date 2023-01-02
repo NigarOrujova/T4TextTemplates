@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class Products
+    public class Product
     {
           public int ProductID { get; set; }
           public string ProductName { get; set; } = null!;

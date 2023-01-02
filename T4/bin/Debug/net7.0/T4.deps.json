@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v7.0": {
       "T4/1.0.0": {
         "dependencies": {
+          "Pluralize.NET": "1.0.2",
           "System.Data.SqlClient": "4.8.5"
         },
         "runtime": {
@@ -19,6 +20,14 @@
         "dependencies": {
           "System.Security.AccessControl": "4.7.0",
           "System.Security.Principal.Windows": "4.7.0"
+        }
+      },
+      "Pluralize.NET/1.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Pluralize.NET.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
+          }
         }
       },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -110,6 +119,13 @@
       "sha512": "sha512-KSrRMb5vNi0CWSGG1++id2ZOs/1QhRqROt+qgbEAdQuGjGrFcl4AOl4/exGPUYz2wUnU42nvJqon1T3U0kPXLA==",
       "path": "microsoft.win32.registry/4.7.0",
       "hashPath": "microsoft.win32.registry.4.7.0.nupkg.sha512"
+    },
+    "Pluralize.NET/1.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kr/sOAem5NPH7Ft0tNiaQOO7f/W7ExcLRERpgvg5BlVZimQ/d/MCxhnwnk+WL4dy5Bj/KjToHUl1azYYDfqzpA==",
+      "path": "pluralize.net/1.0.2",
+      "hashPath": "pluralize.net.1.0.2.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
       "type": "package",

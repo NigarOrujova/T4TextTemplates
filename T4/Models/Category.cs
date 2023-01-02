@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class Categories
+    public class Category
     {
           public int CategoryID { get; set; }
           public string CategoryName { get; set; } = null!;

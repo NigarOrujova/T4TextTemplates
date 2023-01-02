@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class Territories
+    public class Territory
     {
           public string TerritoryID { get; set; } = null!;
           public string TerritoryDescription { get; set; } = null!;

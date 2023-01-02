@@ -1,6 +1,6 @@
 namespace T4.Models
 {
-    public class Employees
+    public class Employee
     {
           public int EmployeeID { get; set; }
           public string LastName { get; set; } = null!;

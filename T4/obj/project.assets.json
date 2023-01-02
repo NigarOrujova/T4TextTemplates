@@ -38,6 +38,15 @@
           }
         }
       },
+      "Pluralize.NET/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Pluralize.NET.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Pluralize.NET.dll": {}
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.7.0": {
         "type": "package",
         "dependencies": {
@@ -212,6 +221,22 @@
         "runtimes/win/lib/netstandard2.0/Microsoft.Win32.Registry.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Pluralize.NET/1.0.2": {
+      "sha512": "kr/sOAem5NPH7Ft0tNiaQOO7f/W7ExcLRERpgvg5BlVZimQ/d/MCxhnwnk+WL4dy5Bj/KjToHUl1azYYDfqzpA==",
+      "type": "package",
+      "path": "pluralize.net/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/Pluralize.NET.dll",
+        "lib/net451/Pluralize.NET.dll",
+        "lib/net46/Pluralize.NET.dll",
+        "lib/netstandard1.1/Pluralize.NET.dll",
+        "lib/netstandard2.0/Pluralize.NET.dll",
+        "pluralize.net.1.0.2.nupkg.sha512",
+        "pluralize.net.nuspec"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.7.0": {
@@ -466,6 +491,7 @@
   },
   "projectFileDependencyGroups": {
     "net7.0": [
+      "Pluralize.NET >= 1.0.2",
       "System.Data.SqlClient >= 4.8.5"
     ]
   },
@@ -475,11 +501,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4\\T4.csproj",
+      "projectUniqueName": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4TextTemplates\\T4\\T4.csproj",
       "projectName": "T4",
-      "projectPath": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4\\T4.csproj",
+      "projectPath": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4TextTemplates\\T4\\T4.csproj",
       "packagesPath": "C:\\Users\\Nigar\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4\\obj\\",
+      "outputPath": "C:\\Users\\Nigar\\Desktop\\Ufo\\T4\\T4TextTemplates\\T4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Nigar\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -508,6 +534,10 @@
       "net7.0": {
         "targetAlias": "net7.0",
         "dependencies": {
+          "Pluralize.NET": {
+            "target": "Package",
+            "version": "[1.0.2, )"
+          },
           "System.Data.SqlClient": {
             "target": "Package",
             "version": "[4.8.5, )"

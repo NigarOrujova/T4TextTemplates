@@ -1,8 +1,8 @@
 namespace T4.Models
 {
-    public class Customers
+    public class Supplier
     {
-          public string CustomerID { get; set; } = null!;
+          public int SupplierID { get; set; }
           public string CompanyName { get; set; } = null!;
           public string? ContactName { get; set; }
           public string? ContactTitle { get; set; }
@@ -13,5 +13,6 @@ namespace T4.Models
           public string? Country { get; set; }
           public string? Phone { get; set; }
           public string? Fax { get; set; }
+          public string? HomePage { get; set; }
     }
 }
